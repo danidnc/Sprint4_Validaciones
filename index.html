@@ -12,32 +12,36 @@
 
 <body>
     <div class="container">
-        <div class="row pt-4">
-            <div class="col-6 mx-auto">
-                <div class="card">
-                    <div class="card-header">
-                        <h1 class="display-4 mb-3">MY LITTLE FORM</h1>
+        <h1 class="display-6 my-3 text-center">MY LITTLE FORM</h1>
+        <form id="formId" name="myForm" class="col-6 mx-auto">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="inputSearch">Search</label>
+                    <input type="text" name="inputSearch" class="form-control" id="inputSearch">
+                    <div class="invalid-feedback" id="errorSearch"></div>
+                    <div class="valid-feedback" id="okSearch"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" name="inputEmail" id="inputEmail" class="form-control">
+                        <div class="invalid-feedback" id="errorEmail"></div>
+                        <div class="valid-feedback" id="okEmail"></div>
                     </div>
-                    <form id="searchFormId" name="myForm" class="card-body">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="inputSearch">Search</label>
-                                <input type="text" name="inputSearch" class="form-control" id="inputSearch">
-                                <div class="invalid-feedback" id="errorSearch"></div>
-                                <div class="valid-feedback" id="okSearch"></div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-3">SEARCH</button>
-                    </form>
+                    <div class="form-group">
+                        <label for="inputPwd">Password</label>
+                        <input type="text" name="inputPwd" id="inputPwd" class="form-control">
+                        <div class="invalid-feedback" id="errorPwd"></div>
+                        <div class="valid-feedback" id="okPwd"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
-    <script src="main.js"></script>
+            <button type="submit" class="btn btn-primary mt-3">SEARCH</button>
+        </form>
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+            </script>
+        <script src="main.js"></script>
 </body>
 
 </html>
