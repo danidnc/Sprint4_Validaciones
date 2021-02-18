@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <h1 class="display-6 my-3 text-center">MY LITTLE FORM</h1>
-        <form id="formId" name="myForm" class="col-6 mx-auto">
+        <form id="formId" name="myForm">
             <div class="form-row">
                 <div class="form-group">
                     <label for="inputSearch">Search</label>
@@ -21,27 +21,54 @@
                     <div class="invalid-feedback" id="errorSearch"></div>
                     <div class="valid-feedback" id="okSearch"></div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="inputEmail">Email</label>
-                        <input type="text" name="inputEmail" id="inputEmail" class="form-control">
-                        <div class="invalid-feedback" id="errorEmail"></div>
-                        <div class="valid-feedback" id="okEmail"></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPwd">Password</label>
-                        <input type="text" name="inputPwd" id="inputPwd" class="form-control">
-                        <div class="invalid-feedback" id="errorPwd"></div>
-                        <div class="valid-feedback" id="okPwd"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="text" name="inputEmail" id="inputEmail" class="form-control">
+                    <div class="invalid-feedback" id="errorEmail"></div>
+                    <div class="valid-feedback" id="okEmail"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="from-group">
+                    <label for="inputPwd1">Password</label>
+                    <input type="text" name="inputPwd1" id="inputPwd1" class="form-control">
+                    <div class="invalid-feedback" id="errorPwd1"></div>
+                    <div class="valid-feedback" id="okPwd1"></div>
+                </div>
+                <div class="from-group">
+                    <label for="inputPwd2">Confirm Password</label>
+                    <input type="text" name="inputPwd2" id="inputPwd2" class="form-control">
+                    <div class="invalid-feedback" id="errorPwd2"></div>
+                    <div class="valid-feedback" id="okPwd2"></div>
+                </div>
+            </div>
+            <div class="form-row mt-4">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <label for="inputProvince" class="input-group-text">Choose a Province</label>
+                        </div>
+                        <select name="inputProvince" id="inputProvince" class="form-control">
+                            <option selected value=""></option>
+                            <option>Barcelona</option>
+                            <option>Girona</option>
+                            <option>Lleida</option>
+                            <option>Tarragona</option>
+                        </select>
+                        <div class="invalid-feedback" id="errorProvince"></div>
+                        <div class="valid-feedback" id="okProvince"></div>
                     </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary mt-3">SEARCH</button>
-        </form>
-        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-            </script>
-        <script src="main.js"></script>
+    </div>
+    </form>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
