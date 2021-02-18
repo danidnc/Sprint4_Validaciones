@@ -54,24 +54,25 @@ function verifyEmail(email) { //verifica email
 
 function verifyPwd(pwd1, pwd2) { // verifica passwords , requisitos min. 8 carácteres , una mayúscula , una minúscula y un número
     const regExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+    const arrPwd = [pwd1, pwd2];
     if (pwd1.value == pwd2.value) {
         if (regExp.test(pwd1.value)) {
-            pwd1.classList.add('is-valid');
-            document.getElementById('okPwd1').textContent = 'Ok';
-            pwd2.classList.add('is-valid');
-            document.getElementById('okPwd2').textContent = 'Ok';
+            for (i = 0; i < arrPwd.length; i++) {
+                arrPwd[i].classList.add('is-valid');
+                document.getElementById(`okPwd${i + 1}`).textContent = 'Ok';
+            }
         }
         else {
-            pwd1.classList.add('is-invalid');
-            document.getElementById('errorPwd1').textContent = 'Not strong enough.At least 8 characters : one number , a capital and a lower letter';
-            pwd2.classList.add('is-invalid');
-            document.getElementById('errorPwd2').textContent = 'Not strong enough.At least 8 characters : one number , a capital and a lower letter';
+            for (i = 0; i < arrPwd.length; i++) {
+                arrPwd[i].classList.add('is-invalid');
+                document.getElementById(`errorPwd${i + 1}`).textContent = 'Not strong enough.At least 8 characters : one number , a capital and a lower letter';
+            }
         }
     } else {
-        pwd1.classList.add('is-invalid');
-        document.getElementById('errorPwd1').textContent = "Passwords doesn't match";
-        pwd2.classList.add('is-invalid');
-        document.getElementById('errorPwd2').textContent = "Passwords doesn't match";
+        for (i = 0; i < arrPwd.length; i++) {
+            arrPwd[i].classList.add('is-invalid');
+            document.getElementById(`errorPwd${i + 1}`).textContent = "Passwords doesn't match";
+        }
     }
 }
 
