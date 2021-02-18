@@ -63,15 +63,15 @@ function verifyPwd(pwd1, pwd2) { // verifica passwords , requisitos min. 8 cará
         }
         else {
             pwd1.classList.add('is-invalid');
-            document.getElementById('errorPwd1').textContent = 'Not strong enough';
+            document.getElementById('errorPwd1').textContent = 'Not strong enough.At least 8 characters : one number , a capital and a lower letter';
             pwd2.classList.add('is-invalid');
-            document.getElementById('errorPwd2').textContent = 'Not strong enough';
+            document.getElementById('errorPwd2').textContent = 'Not strong enough.At least 8 characters : one number , a capital and a lower letter';
         }
     } else {
         pwd1.classList.add('is-invalid');
-        document.getElementById('errorPwd1').textContent = "Password doesn't match";
+        document.getElementById('errorPwd1').textContent = "Passwords doesn't match";
         pwd2.classList.add('is-invalid');
-        document.getElementById('errorPwd2').textContent = "Password doesn't match";
+        document.getElementById('errorPwd2').textContent = "Passwords doesn't match";
     }
 }
 
